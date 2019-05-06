@@ -1,0 +1,653 @@
+fileFormatVersion: 2
+guid: 49eb28690b9820043a10d159498a6c5e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9161368033756750581
+    second: enemyfire_0
+  - first:
+      213: -349771321258771251
+    second: enemyfire_1
+  - first:
+      213: -1505755530628336391
+    second: enemyfire_2
+  - first:
+      213: -8898132110204503098
+    second: enemyfire_4
+  - first:
+      213: 8311636144177347018
+    second: enemyfire_6
+  - first:
+      213: 645918821004625695
+    second: enemyfire_7
+  - first:
+      213: 698785481414445530
+    second: enemyfire_8
+  - first:
+      213: 6548842126487548397
+    second: enemyfire_9
+  - first:
+      213: -8310226066941983577
+    second: enemyfire_10
+  - first:
+      213: 8866452708115141168
+    second: enemyfire_11
+  - first:
+      213: -5591602882437445238
+    second: enemyfire_12
+  - first:
+      213: 6678559780685004923
+    second: enemyfire_13
+  - first:
+      213: 5301796129832901062
+    second: enemyfire_14
+  - first:
+      213: -3581656748991993994
+    second: enemyfire_15
+  - first:
+      213: 5738034839768132227
+    second: enemyfire_16
+  - first:
+      213: -6608182620651821493
+    second: enemyfire_17
+  - first:
+      213: -2989725267807203063
+    second: enemyfire_18
+  - first:
+      213: -4395009567885510296
+    second: enemyfire_19
+  - first:
+      213: -1987806060956107569
+    second: enemyfire_20
+  - first:
+      213: 3907956680381494918
+    second: enemyfire_21
+  - first:
+      213: 8432717144848424080
+    second: enemyfire_22
+  - first:
+      213: 6140097914247021525
+    second: enemyfire_23
+  - first:
+      213: 8842375848064598135
+    second: enemyfire_24
+  - first:
+      213: 886134667166096133
+    second: enemyfire_25
+  - first:
+      213: 2332261558267199233
+    second: enemyfire_26
+  - first:
+      213: 715039100080854988
+    second: enemyfire_27
+  - first:
+      213: 9067745301444651658
+    second: enemyfire_29
+  - first:
+      213: 2021659254883650268
+    second: enemyfire_30
+  - first:
+      213: 4612164070733448672
+    second: enemyfire_31
+  - first:
+      213: 6489447245379985236
+    second: enemyfire_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemyfire_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 48
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6138789, y: 0.038831282}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a73fd85dec68694db685ad43587361d
+      internalID: 9161368033756750581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 66
+        height: 38
+      alignment: 9
+      pivot: {x: 0.7209882, y: 0.03717309}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69055807784bc58498e0d3167e8f3131
+      internalID: -349771321258771251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 68
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6985184, y: 0.03695538}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884d50f29908bdb47be2a9cffe022ea0
+      internalID: -1505755530628336391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 75
+        height: 47
+      alignment: 9
+      pivot: {x: 0.7272306, y: 0.031386018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f319cc0a12268444ba9badf16896c28
+      internalID: -8898132110204503098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_6
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 76
+        height: 47
+      alignment: 9
+      pivot: {x: 0.7301033, y: 0.031767897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6d2eb25858abe4abcb42ec7a9b27b3
+      internalID: 8311636144177347018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 59
+        height: 47
+      alignment: 9
+      pivot: {x: 0.6522336, y: 0.031181354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2d9e54d0d5a154f9239d1b79848744
+      internalID: 6548842126487548397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_11
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 0
+        width: 58
+        height: 47
+      alignment: 9
+      pivot: {x: 0.64633757, y: 0.030964017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8488c496e868a2242a214dcac77f0af7
+      internalID: 8866452708115141168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_13
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 0
+        width: 59
+        height: 45
+      alignment: 9
+      pivot: {x: 0.65159684, y: 0.030923523}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ea3eecdedea9f42bf780e5e20d005c
+      internalID: 6678559780685004923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_14
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 0
+        width: 60
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6587972, y: 0.032176793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fd03f25b5f38648bcb931ae78b3f99
+      internalID: 5301796129832901062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_15
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 0
+        width: 59
+        height: 45
+      alignment: 9
+      pivot: {x: 0.66976464, y: 0.032747943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f9cd803ed3c764ebf818a84277e642
+      internalID: -3581656748991993994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_16
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 0
+        width: 60
+        height: 46
+      alignment: 9
+      pivot: {x: 0.67573345, y: 0.030730851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab2b66177b9fe7641b54a41a44be0df7
+      internalID: 5738034839768132227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_17
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 0
+        width: 59
+        height: 46
+      alignment: 9
+      pivot: {x: 0.686929, y: 0.03132016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 900d57b2ad9615f4ebc5785a62b66b5d
+      internalID: -6608182620651821493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_18
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 0
+        width: 59
+        height: 46
+      alignment: 9
+      pivot: {x: 0.68596894, y: 0.031108504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ec6f8f158b12244aa2af1ef06f5265
+      internalID: -2989725267807203063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_19
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 59
+        height: 46
+      alignment: 9
+      pivot: {x: 0.68663, y: 0.03161138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621a9dc80f11e774998c50b41d4266d9
+      internalID: -4395009567885510296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_20
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 0
+        width: 46
+        height: 38
+      alignment: 9
+      pivot: {x: 0.59661865, y: 0.039289933}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff73a86c39674794f9f14c962eb5708b
+      internalID: -1987806060956107569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_21
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 0
+        width: 40
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5662567, y: 0.03552375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211dcefbe3b2f1d43ab1db5e985ff7e3
+      internalID: 3907956680381494918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_22
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 0
+        width: 40
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5626465, y: 0.03297858}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e1a312b8b4cfe43abc51ace6834a9f
+      internalID: 8432717144848424080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_24
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 0
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.56268007, y: 0.031260535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511ddd4b7cd250c4896d96cd483d069d
+      internalID: 8842375848064598135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_25
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 0
+        width: 40
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5644348, y: 0.030590437}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4c543e7a4bca44fac825542115ead0
+      internalID: 886134667166096133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_26
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 0
+        width: 40
+        height: 47
+      alignment: 9
+      pivot: {x: 0.5626465, y: 0.02971025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92150fabfc8d164ba88c191d2982f27
+      internalID: 2332261558267199233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_27
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 0
+        width: 40
+        height: 42
+      alignment: 9
+      pivot: {x: 0.562677, y: 0.035244495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75cdd0523804c741ad35f984fd7e1b3
+      internalID: 715039100080854988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyfire_32
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 0
+        width: 40
+        height: 37
+      alignment: 9
+      pivot: {x: 0.56264955, y: 0.038442153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee04eed09a330a469457d207dfd0972
+      internalID: 6489447245379985236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e9acb6c8f8892944ba8f99dca2163280
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

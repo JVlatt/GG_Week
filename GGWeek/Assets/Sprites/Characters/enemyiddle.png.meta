@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 171ef2f941faa4543916e65ca874febe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 614586787564147829
+    second: enemyiddle_0
+  - first:
+      213: 2743100742007872635
+    second: enemyiddle_1
+  - first:
+      213: -363168075410232333
+    second: enemyiddle_2
+  - first:
+      213: 8500226986552828176
+    second: enemyiddle_3
+  - first:
+      213: -1709164792230695490
+    second: enemyiddle_4
+  - first:
+      213: -85217963346411282
+    second: enemyiddle_5
+  - first:
+      213: 7155852090763200327
+    second: enemyiddle_6
+  - first:
+      213: -3513661475252625982
+    second: enemyiddle_7
+  - first:
+      213: 9192418610322496547
+    second: enemyiddle_8
+  - first:
+      213: -2970867170285364029
+    second: enemyiddle_9
+  - first:
+      213: -601373496236356261
+    second: enemyiddle_10
+  - first:
+      213: -5370377842729798092
+    second: enemyiddle_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: enemyiddle_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5239353, y: 0.037625678}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e543f05e55dd49940828fd5873b889f7
+      internalID: 614586787564147829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.52060956, y: 0.03496317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd714bdf15cf02446af9a5c045cec90d
+      internalID: 2743100742007872635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5240447, y: 0.037076976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17665eb096d2a7c43a7672cb8f9c6183
+      internalID: -363168075410232333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.52060986, y: 0.03496317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10fb05ca134a75488054143d2fa5c63
+      internalID: 8500226986552828176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_4
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.52061015, y: 0.037076976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a2d24fcd8ab454d90ee3b1d75a7efa
+      internalID: -1709164792230695490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_5
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.52061015, y: 0.039190777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e15d4b98743644b953f9d3989f852c
+      internalID: -85217963346411282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_6
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.52061015, y: 0.037076976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db062a6508165954baf2f1e90394d2d5
+      internalID: 7155852090763200327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 2
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.5206108, y: 0.039190777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1450594939335df47ab81e412a8cf16f
+      internalID: -3513661475252625982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 2
+        width: 25
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5395715, y: 0.04101886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662b29a9c07ca7546b6f270491d61ced
+      internalID: 9192418610322496547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_9
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 2
+        width: 25
+        height: 37
+      alignment: 9
+      pivot: {x: 0.5395715, y: 0.038790792}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a0de39e50c048479615c60e4993e49
+      internalID: -2970867170285364029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_10
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 2
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 0.53627443, y: 0.043056004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa82751e04cb1941b8c7efc918b28e3
+      internalID: -601373496236356261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemyiddle_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 2
+        width: 25
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5428687, y: 0.040700626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a32b57c70da834abfcedf5a0688720
+      internalID: -5370377842729798092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 045b8abafcc6c524fb60e1132dcd3594
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
