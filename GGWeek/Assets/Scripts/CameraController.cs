@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Script;
 
 public class CameraController : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class CameraController : MonoBehaviour
     public Transform _limiteMax;
 
     private Vector2 _velocity = Vector2.zero;
-
+    private void Awake()
+    {
+        GameManager.GetManager()._myCamera = GetComponent<CameraController>();
+    }
     void Update()
     {
         Vector2 newPosCam;

@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
+using Assets.Script;
+
+
 public class PlayerController : MonoBehaviour {
   
     public float _speedMoveX;
@@ -9,14 +13,26 @@ public class PlayerController : MonoBehaviour {
     public float _speedJump;
     public GameObject bulletPrefab;
 
+    private bool _isDashing = false;
+    private float _dashLengthTimer = 0f;
+    public float _dashLength = 0.5f;
+    private int _hp = 3;
+    private Collider2D _myCollider;
+
     [SerializeField]
     private Vector3 _posCheck = new Vector3();
+
+    [SerializeField]
+    private GameObject UIManager;
+
+    private UIManager _myUI;
 
     private Rigidbody2D _myRg;
     private SpriteRenderer _mySpriteRend;
     private Animator _myAnim;
 
-
+    private float _dashTimer;
+    public float _dashCooldown = 2.0f;
     private float _timer = 0;
     public float _cooldown = 0.2f;
     private int facingRight = 1;
@@ -29,22 +45,52 @@ public class PlayerController : MonoBehaviour {
         _myRg = GetComponent<Rigidbody2D>();
         _mySpriteRend = GetComponent<SpriteRenderer>();
         _myAnim = GetComponent<Animator>();
+        _myUI = UIManager.GetComponent<UIManager>();
+        _myCollider = GetComponent<Collider2D>();
+        GameManager.GetManager()._myPlayer = GetComponent<PlayerController>();
     }
 
     void Update () {
-        Mouvement();
-        if(Input.GetButton("Fire1") && _timer > _cooldown)
+        if(!_isDashing)
+        {
+            _myCollider.enabled = true;
+            Mouvement();
+        }
+        if (Input.GetButton("Fire1") && _timer > _cooldown)
         {
             Fire();
             _timer = 0;
         }
+        if(_hp == 0)
+        {
+            Death();
+        }
+        if(!_isDashing && Input.GetButton("Jump") && _dashTimer >= _dashCooldown)
+        {
+            Dash();
+            _dashLengthTimer = 0;
+            _dashTimer = 0;
+        }
+        if(_dashLengthTimer >= _dashLength && _isDashing)
+        {
+            _myRg.velocity = Vector2.zero;
+            _isDashing = false;
+            Debug.Log("test2");
+        }
+        if(_isDashing)
+        {
+            _myCollider.enabled = false;
+        }
+        _dashLengthTimer += Time.deltaTime;
+        _dashTimer += Time.deltaTime;
         _timer += Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("EnemyBullet"))
-        { 
-            Debug.Log("Touché");
+        if (collision.gameObject.CompareTag("EnemyBullet") && _hp > 0)
+        {
+            _hp -= 1;
+            _myUI.UpdateHearts(_hp);
             Destroy(collision.gameObject);
         }
     }
@@ -71,7 +117,6 @@ public class PlayerController : MonoBehaviour {
         { 
             directionY = Input.GetAxis("Vertical") * Time.deltaTime * _speedMoveY;
         }
-
         if (Input.GetAxis("Horizontal") < 0)
         { 
             _mySpriteRend.flipX = true;
@@ -94,27 +139,19 @@ public class PlayerController : MonoBehaviour {
 
          transform.Translate(directionX, directionY, 0);
     }
-    /*
-    private void Jump()
+    private void Death()
     {
-        //Debug.Log(Input.GetAxis("Jump") + " : " + Input.GetAxisRaw("Jump"));
-        //float directionY = 0;
-
-        if (Input.GetButton("Jump") && Input.GetAxis("Jump") < 1 && !_isJumped)
-        { 
-            _myRg.velocity = new Vector2(0, Input.GetAxis("Jump") * _speedJump);
-        }
-
-        if (Input.GetButtonUp("Jump") || Input.GetAxis("Jump") >= 1)
-            _isJumped = true;
+        Debug.Log("Defeat");
+        _myAnim.SetTrigger("Death");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    private void OnCollisionStay2D(Collision2D collision)
+    private void Dash()
     {
-        if (collision.gameObject.CompareTag("Platform"))
-        {
-            _isJumped = false;
-        }
+        _isDashing = true;
+        Vector2 dir = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * _speedMoveX, Input.GetAxis("Vertical") * Time.deltaTime * _speedMoveX);
+        dir.Normalize();
+        _myRg.velocity = dir * _speedJump;
+        Debug.Log("test");
+        
     }
-    */
 }
