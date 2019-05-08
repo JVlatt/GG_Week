@@ -14,9 +14,9 @@ public class PlayerController : MonoBehaviour {
     public GameObject bulletPrefab;
 
     private bool _isDashing = false;
-    private float _dashLengthTimer = 0f;
+    private float _dashLengthTimer;
     public float _dashLength = 0.5f;
-    private int _hp = 3;
+    public int _hp = 3;
     private Collider2D _myCollider;
 
     [SerializeField]
@@ -40,6 +40,12 @@ public class PlayerController : MonoBehaviour {
     public float _offsetX;
     public float _offsetY;
 
+    private bool isInvicible = false;
+    private float invicibleTimer = 0;
+
+    [System.NonSerialized]
+    public bool _canDoShit = true;
+
     private void Awake()
     {
         _myRg = GetComponent<Rigidbody2D>();
@@ -48,38 +54,53 @@ public class PlayerController : MonoBehaviour {
         _myUI = UIManager.GetComponent<UIManager>();
         _myCollider = GetComponent<Collider2D>();
         GameManager.GetManager()._myPlayer = GetComponent<PlayerController>();
+        _dashTimer = _dashCooldown;
     }
 
     void Update () {
-        if(!_isDashing)
-        {
-            _myCollider.enabled = true;
-            Mouvement();
-        }
-        if (Input.GetButton("Fire1") && _timer > _cooldown)
-        {
-            Fire();
-            _timer = 0;
-        }
-        if(_hp == 0)
-        {
-            Death();
-        }
-        if(!_isDashing && Input.GetButton("Jump") && _dashTimer >= _dashCooldown)
-        {
-            Dash();
-            _dashLengthTimer = 0;
-            _dashTimer = 0;
-        }
-        if(_dashLengthTimer >= _dashLength && _isDashing)
-        {
-            _myRg.velocity = Vector2.zero;
-            _isDashing = false;
-            Debug.Log("test2");
-        }
-        if(_isDashing)
-        {
-            _myCollider.enabled = false;
+        if(_canDoShit)
+        { 
+            if(!_isDashing)
+            {
+                _myCollider.enabled = true;
+                Mouvement();
+            }
+            if (Input.GetButton("Fire1") && _timer > _cooldown)
+            {
+                Fire();
+                _timer = 0;
+            }
+            if(_hp == 0)
+            {
+                Death();
+            }
+            if(!_isDashing && Input.GetButton("Jump") && _dashTimer >= _dashCooldown)
+            {
+                Dash();
+                _dashLengthTimer = 0;
+                _dashTimer = 0;
+            }
+            if(_dashLengthTimer >= _dashLength && _isDashing)
+            {
+                _myRg.velocity = Vector2.zero;
+                _isDashing = false;
+                Debug.Log("test2");
+            }
+            if(_isDashing)
+            {
+                _myCollider.enabled = false;
+            }
+
+            if (isInvicible)
+            { 
+                _myCollider.enabled = false;
+                invicibleTimer += Time.deltaTime;
+            }
+            if (invicibleTimer >= 3.0)
+            {
+                isInvicible = false;
+                _myCollider.enabled = true;
+            }
         }
         _dashLengthTimer += Time.deltaTime;
         _dashTimer += Time.deltaTime;
@@ -92,6 +113,8 @@ public class PlayerController : MonoBehaviour {
             _hp -= 1;
             _myUI.UpdateHearts(_hp);
             Destroy(collision.gameObject);
+            isInvicible = true;
+            invicibleTimer = 0;
         }
     }
     private void Fire()

@@ -22,6 +22,25 @@ namespace Assets.Script
         public UIManager _myUI;
         public CameraController _myCamera;
 
+        public float _line1Top;
+        public float _line1Center;
+        public float _line1Bottom;
+        public float _line2Top;
+        public float _line2Center;
+        public float _line2Bottom;
+        public float _line3Top;
+        public float _line3Center;
+        public float _line3Bottom;
+        public float _line4Top;
+        public float _line4Center;
+        public float _line4Bottom;
+        public float _line5Top;
+        public float _line5Center;
+        public float _line5Bottom;
+
+        public float _TopLimit;
+        public float _BottomLimit;
+
         public void InitPlayer(PlayerController pc)
         {
             _myPlayer = pc;
@@ -33,6 +52,16 @@ namespace Assets.Script
         public void InitCamera(CameraController camera)
         {
             _myCamera = camera;
+        }
+        public void FreezePlayer(bool state)
+        {
+            _myPlayer._canDoShit = state;
+            _myPlayer.gameObject.GetComponent<Animator>().SetBool("Moving", false);
+        }
+
+        public void HurtPlayer(int amount)
+        {
+            _myPlayer._hp -= amount;
         }
     }
 }

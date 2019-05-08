@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject _enemyBullet;
     private float _timer;
     private Animator _myAnim;
+    private float [] spawnAreas = new float [5];
 
     private Collider2D _bulletCollider;
 
@@ -33,11 +34,17 @@ public class EnemyScript : MonoBehaviour
     }
     private void Start()
     {
-        float _randomY = Random.Range(-2.93f, -0.79f);
-        float _randomX = Random.Range(2, 8);
+        spawnAreas[0] = GameManager.GetManager()._line1Bottom;
+        spawnAreas[1] = GameManager.GetManager()._line2Bottom;
+        spawnAreas[2] = GameManager.GetManager()._line3Bottom;
+        spawnAreas[3] = GameManager.GetManager()._line4Bottom;
+        spawnAreas[4] = GameManager.GetManager()._line5Bottom;
+
+        int _randomY = Random.Range(0, 4);
+
         if(_isMoving)
-        transform.position = new Vector2(transform.position.x + _randomX, _randomY);
-        int _move = Random.Range(5, 10);
+        transform.position = new Vector2(transform.position.x, spawnAreas[_randomY]);
+        float _move = Random.Range(6, 11);
         _pos = new Vector2(transform.position.x - _move, transform.position.y);
         
     }
@@ -59,6 +66,7 @@ public class EnemyScript : MonoBehaviour
         {
             _hp -= 1;
             _isAware = true;
+            _isMoving = false;
             _myAnim.SetTrigger("detect");
             Destroy(collision.gameObject);
         }
@@ -84,7 +92,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Move()
     {
-        if(transform.position.x > _pos.x)
+        if(transform.position.x > _pos.x && isAlive)
         {
             _myAnim.SetTrigger("move");
             transform.Translate(-1 * (Time.deltaTime * _speed), 0, 0);

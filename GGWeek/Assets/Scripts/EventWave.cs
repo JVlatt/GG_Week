@@ -46,7 +46,6 @@ public class EventWave : MonoBehaviour
         {
             case EVENT_STATE.INIT:
                 GameManager.GetManager()._myCamera._target = _pos.transform;
-                GameManager.GetManager()._myCamera._smoothCam = false;
                 GameManager.GetManager().killCount = 0;
                 _myState = EVENT_STATE.WAVE;
                 break;
