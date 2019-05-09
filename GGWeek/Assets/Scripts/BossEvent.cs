@@ -10,7 +10,7 @@ public class BossEvent : MonoBehaviour
     public GameObject _boss;
     public Transform _destination;
     private bool _hasSpawn = false;
-    public GameObject LifeBarDisplay;
+    public UIManager _uiManager;
 
     private void Start()
     {
@@ -21,12 +21,11 @@ public class BossEvent : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !_hasSpawn)
         {
             _hasSpawn = true;
-            LifeBarDisplay.SetActive(true);
             GameManager.GetManager()._myCamera._target = _cameraTarget.transform;
             GameManager.GetManager().killCount = 0;
             GameManager.GetManager().FreezePlayer(false);
             _boss.GetComponent<BossScript>()._dest = _destination;
-            _boss.GetComponent<BossScript>()._lifebar = LifeBarDisplay.GetComponentInChildren<LifeBarController>();
+            _boss.GetComponent<BossScript>()._ui = _uiManager;
             Instantiate(_boss, _spawnPos);
             
         }

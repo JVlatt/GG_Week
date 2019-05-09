@@ -65,11 +65,17 @@ public class PlayerController : MonoBehaviour {
                 _myCollider.enabled = true;
                 Mouvement();
             }
-            if (Input.GetButton("Fire1") && _timer > _cooldown)
+            if (_timer >= _cooldown && Input.GetButton("Fire1"))
             {
                 Fire();
                 _timer = 0;
             }
+            /*
+            if(Input.GetButton("Fire1"))
+            {
+                _cooldown -= 0.1f;
+            }
+            */
             if(_hp == 0)
             {
                 Death();
@@ -101,7 +107,11 @@ public class PlayerController : MonoBehaviour {
                 isInvicible = false;
                 _myCollider.enabled = true;
             }
-        }
+        }/*
+        if(_cooldown < 5.0f)
+        { 
+            _cooldown += 0.1f;
+        }*/
         _dashLengthTimer += Time.deltaTime;
         _dashTimer += Time.deltaTime;
         _timer += Time.deltaTime;

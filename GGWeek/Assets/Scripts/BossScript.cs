@@ -38,7 +38,7 @@ public class BossScript : MonoBehaviour
     bool movingLeft = true;
     private float posX;
 
-    public LifeBarController _lifebar;
+    public  UIManager _ui;
 
     private enum BOSS_STATE {
         INIT,
@@ -68,13 +68,12 @@ public class BossScript : MonoBehaviour
     private void Start()
     {
         _betweenKnifeTimer = _timeBetweenKnifes;
-        _lifebar._lifeMax = _hp;
+        _ui.StateLifeBar(true);
     }
     void Update()
     {
         if (_hp <= 0)
         { 
-            _isAlive = false;
             _state = BOSS_STATE.DEATH;
         }
         if (_isAlive)
@@ -84,9 +83,11 @@ public class BossScript : MonoBehaviour
             if (_state == BOSS_STATE.FIGHT)
                 FightLoop();
         }
-        if(_state == BOSS_STATE.DEATH && !_isAlive)
+        if(_state == BOSS_STATE.DEATH && _isAlive)
         {
+            _isAlive = false;
             _myAnim.SetTrigger("Death");
+            _ui.StateLifeBar(false);
             GameManager.GetManager()._myCamera._target = GameManager.GetManager()._myPlayer.gameObject.transform;
             Debug.Log("Victory");
         }
@@ -287,7 +288,7 @@ public class BossScript : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerBullet") && _isAlive)
         {
             _hp -= 1;
-            _lifebar.SetLife(-1);
+            _ui.UpdateBossHP(_hp);
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Player") && _isAlive)
