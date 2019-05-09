@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8273738299811397003}
   - component: {fileID: 3790983135896978697}
   - component: {fileID: 9176889812632000492}
+  - component: {fileID: 4597198152268965500}
   m_Layer: 0
   m_Name: Shield
   m_TagString: Untagged
@@ -70,6 +71,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e050dd037797fca49b708c168821dd67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &4597198152268965500
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034944796396800667}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7973430805988375194
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +104,6 @@ GameObject:
   - component: {fileID: 1543660170601612706}
   - component: {fileID: 5450811921870575762}
   - component: {fileID: 4675459249167646977}
-  - component: {fileID: 4526302014641349427}
   - component: {fileID: 8704889860316924836}
   m_Layer: 0
   m_Name: Boss
@@ -167,15 +188,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dest: {fileID: 0}
+  _range: {fileID: 0}
   _speed: 3
-  cooldown: 10
+  cooldown: 3
   _knifeDuration: 5
   _timeBetweenKnifes: 1
   _offsetX: 5
   _knife: {fileID: 2466898061199595728, guid: e09a32b36013c5443a8d9971b5d816d6, type: 3}
   _shieldDuration: 5
-  LifeBarPannel: {fileID: 0}
-  _lifebar: {fileID: 0}
+  _ui: {fileID: 0}
 --- !u!95 &4675459249167646977
 Animator:
   serializedVersion: 3
@@ -195,27 +216,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &4526302014641349427
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7973430805988375194}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &8704889860316924836
 BoxCollider2D:
   m_ObjectHideFlags: 0

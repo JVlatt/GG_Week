@@ -31,13 +31,6 @@ namespace Assets.Script
         public float _line3Top;
         public float _line3Center;
         public float _line3Bottom;
-        public float _line4Top;
-        public float _line4Center;
-        public float _line4Bottom;
-        public float _line5Top;
-        public float _line5Center;
-        public float _line5Bottom;
-
         public float _TopLimit;
         public float _BottomLimit;
 

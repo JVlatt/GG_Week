@@ -7,6 +7,7 @@ public class BossEvent : MonoBehaviour
 {
     public GameObject _cameraTarget;
     public Transform _spawnPos;
+    public Transform _rangeBoss;
     public GameObject _boss;
     public Transform _destination;
     private bool _hasSpawn = false;
@@ -26,6 +27,7 @@ public class BossEvent : MonoBehaviour
             GameManager.GetManager().FreezePlayer(false);
             _boss.GetComponent<BossScript>()._dest = _destination;
             _boss.GetComponent<BossScript>()._ui = _uiManager;
+            _boss.GetComponent<BossScript>()._range = _rangeBoss;
             Instantiate(_boss, _spawnPos);
             
         }

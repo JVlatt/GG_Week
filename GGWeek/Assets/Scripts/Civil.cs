@@ -20,6 +20,10 @@ public class Civil : MonoBehaviour
         _myAnim = GetComponent<Animator>();
         _myCollider = GetComponent<Collider2D>();
     }
+    private void Start()
+    {
+        _mySprite.flipX = true;
+    }
     void Update()
     {
         if(_isAlive)
@@ -33,19 +37,22 @@ public class Civil : MonoBehaviour
         if(transform.position.x >= pos2.position.x)
         {
             dirX = -1;
-            _mySprite.flipX = false;
+            _mySprite.flipX = true;
         }
         if(transform.position.x <= pos1.position.x)
         {
             dirX = 1;
-            _mySprite.flipX = true;
+            _mySprite.flipX = false;
         }
         transform.Translate(dirX*(Time.deltaTime * _speed),0,0);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("PlayerBullet") && _isAlive)
+        { 
             _hp -= 1;
+            Destroy(collision.gameObject);
+        }
     }
     private void Death()
     {

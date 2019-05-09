@@ -16,18 +16,19 @@ public class EnemyScript : MonoBehaviour
     public GameObject _enemyBullet;
     private float _timer;
     private Animator _myAnim;
-    private float [] spawnAreas = new float [5];
+    private float [] spawnAreas = new float [3];
 
     private Collider2D _bulletCollider;
 
     public float _offsetX;
     public float _offsetY;
     private float _bulletSpeed = 10;
-
+    private SpriteRenderer _sp;
     public float _speed = 7.0f;
 
     void Awake()
     {
+        _sp = GetComponent<SpriteRenderer>();
         _myAnim = GetComponent<Animator>();
         _bulletCollider = GetComponent<Collider2D>();
         
@@ -37,11 +38,9 @@ public class EnemyScript : MonoBehaviour
         spawnAreas[0] = GameManager.GetManager()._line1Bottom;
         spawnAreas[1] = GameManager.GetManager()._line2Bottom;
         spawnAreas[2] = GameManager.GetManager()._line3Bottom;
-        spawnAreas[3] = GameManager.GetManager()._line4Bottom;
-        spawnAreas[4] = GameManager.GetManager()._line5Bottom;
 
-        int _randomY = Random.Range(0, 4);
-
+        int _randomY = Random.Range(0, 2);
+        _sp.flipX = true;
         if(_isMoving)
         transform.position = new Vector2(transform.position.x, spawnAreas[_randomY]);
         float _move = Random.Range(6, 11);

@@ -6,6 +6,8 @@ using Assets.Script;
 public class BossScript : MonoBehaviour
 {
     public Transform _dest;
+    public Transform _range;
+    private float _offsetRange;
     private Animator _myAnim;
     private Rigidbody2D _rb;
     private SpriteRenderer _sp;
@@ -67,6 +69,7 @@ public class BossScript : MonoBehaviour
     }
     private void Start()
     {
+        _offsetRange = _range.position.x;
         _betweenKnifeTimer = _timeBetweenKnifes;
         _ui.StateLifeBar(true);
     }
@@ -119,7 +122,6 @@ public class BossScript : MonoBehaviour
     }
     private void FightLoop()
     {
-        Debug.Log("BOSS HP : " + _hp);
         if(cooldown <= _timer)
         {
             switch(_ability)
@@ -140,16 +142,12 @@ public class BossScript : MonoBehaviour
                                 _myAnim.SetTrigger("fire");
 
                                 GameObject knife1 = Instantiate(_knife);
-                                GameObject knife2 = Instantiate(_knife);
 
                                 knife1.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center);
-                                knife2.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line4Center);
 
                                 Rigidbody2D rb1 = knife1.GetComponent<Rigidbody2D>();
-                                Rigidbody2D rb2 = knife2.GetComponent<Rigidbody2D>();
 
                                 rb1.velocity = new Vector2(-10, 0);
-                                rb2.velocity = new Vector2(-10, 0);
 
                                 _pair = false;
                                 break;
@@ -160,19 +158,15 @@ public class BossScript : MonoBehaviour
 
                                 GameObject knife1 = Instantiate(_knife);
                                 GameObject knife2 = Instantiate(_knife);
-                                GameObject knife3 = Instantiate(_knife);
 
                                 knife1.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line1Center);
                                 knife2.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line3Center);
-                                knife3.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line5Center);
 
                                 Rigidbody2D rb1 = knife1.GetComponent<Rigidbody2D>();
                                 Rigidbody2D rb2 = knife2.GetComponent<Rigidbody2D>();
-                                Rigidbody2D rb3 = knife3.GetComponent<Rigidbody2D>();
 
                                 rb1.velocity = new Vector2(-10, 0);
                                 rb2.velocity = new Vector2(-10, 0);
-                                rb3.velocity = new Vector2(-10, 0);
 
                                 _pair = true;
                                 break;
@@ -218,17 +212,17 @@ public class BossScript : MonoBehaviour
                                 GameObject knife2 = Instantiate(_knife);
                                 GameObject knife3 = Instantiate(_knife);
 
-                                knife1.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line1Center);
-                                knife2.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line3Center);
-                                knife3.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line5Center);
+                                knife1.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center);
+                                knife2.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center);
+                                knife3.transform.position = new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center);
 
                                 Rigidbody2D rb1 = knife1.GetComponent<Rigidbody2D>();
                                 Rigidbody2D rb2 = knife2.GetComponent<Rigidbody2D>();
                                 Rigidbody2D rb3 = knife3.GetComponent<Rigidbody2D>();
 
-                                rb1.velocity = (new Vector2 (70, GameManager.GetManager()._line1Center) - new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line3Center));
-                                rb2.velocity = (new Vector2(70, GameManager.GetManager()._line3Center) - new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line3Center));
-                                rb3.velocity = (new Vector2(70, GameManager.GetManager()._line5Center) - new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line3Center));
+                                rb1.velocity = (new Vector2 (_offsetRange, GameManager.GetManager()._line1Center) - new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center));
+                                rb2.velocity = (new Vector2(_offsetRange, GameManager.GetManager()._line2Center) - new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center));
+                                rb3.velocity = (new Vector2(_offsetRange, GameManager.GetManager()._line3Center) - new Vector2(transform.position.x - _offsetX, GameManager.GetManager()._line2Center));
                             }
                         }
                         else

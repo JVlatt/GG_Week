@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour {
 
     public GameObject _myAudio;
     private Animator _myAnimator;
-    public GameObject _logo;
 
     private void Start()
     {
@@ -31,14 +30,12 @@ public class MainMenu : MonoBehaviour {
 
     public void OptionButton()
     {
-        _logo.SetActive(false);
         _myAnimator.SetTrigger("option");
         SoundControler._soundControler.PlaySound(SoundControler._soundControler._transi1);
     }
 
     public void Backbutton()
     {
-        _logo.SetActive(true);
         _myAnimator.SetTrigger("main");
         SoundControler._soundControler.PlaySound(SoundControler._soundControler._transi2);
     }
